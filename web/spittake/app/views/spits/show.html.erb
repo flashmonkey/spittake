@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @spit.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @spit.description %>
+</p>
+
+<p>
+  <b>Uri:</b>
+  <%= @spit.uri %>
+</p>
+
+<p>
+  <b>Contributor:</b>
+  <%= @spit.contributor_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @spit.type_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_spit_path(@spit) %> |
+<%= link_to 'Back', spits_path %>

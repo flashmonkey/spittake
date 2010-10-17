@@ -1,0 +1,31 @@
+<h1>Listing spits</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Uri</th>
+    <th>Contributor</th>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @spits.each do |spit| %>
+  <tr>
+    <td><%= spit.title %></td>
+    <td><%= spit.description %></td>
+    <td><%= spit.uri %></td>
+    <td><%= spit.contributor_id %></td>
+    <td><%= spit.type_id %></td>
+    <td><%= link_to 'Show', spit %></td>
+    <td><%= link_to 'Edit', edit_spit_path(spit) %></td>
+    <td><%= link_to 'Destroy', spit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Spit', new_spit_path %>

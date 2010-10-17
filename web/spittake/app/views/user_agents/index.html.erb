@@ -1,0 +1,23 @@
+<h1>Listing user_agents</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_agents.each do |user_agent| %>
+  <tr>
+    <td><%= user_agent.name %></td>
+    <td><%= link_to 'Show', user_agent %></td>
+    <td><%= link_to 'Edit', edit_user_agent_path(user_agent) %></td>
+    <td><%= link_to 'Destroy', user_agent, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User agent', new_user_agent_path %>

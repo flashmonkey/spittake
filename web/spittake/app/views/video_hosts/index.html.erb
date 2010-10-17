@@ -1,0 +1,23 @@
+<h1>Listing video_hosts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @video_hosts.each do |video_host| %>
+  <tr>
+    <td><%= video_host.name %></td>
+    <td><%= link_to 'Show', video_host %></td>
+    <td><%= link_to 'Edit', edit_video_host_path(video_host) %></td>
+    <td><%= link_to 'Destroy', video_host, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Video host', new_video_host_path %>
